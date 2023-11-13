@@ -1,0 +1,1366 @@
+:root {
+    --background-color: rgb(0, 0, 0);
+    --color: rgb(255, 255, 255);
+    --nav-color: rgb(142, 0, 0);
+    --nav-hover-color: rgb(255, 0, 0);
+    --c-tier-hover: linear-gradient(45deg,  rgb(80, 120, 219), rgb(86, 64, 91));
+    --b-tier-hover: linear-gradient(45deg,  rgb(246, 188, 0), rgb(196, 49, 0));
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+section {
+    scroll-margin-top: 7.5em;
+}
+
+iframe{
+    border: 0;
+}
+aside#video-nav h2, aside#playlist-nav h2 {
+    text-align: center;
+}
+#luckyguy section {
+    color: var(--color)
+}
+
+ul.pop_out_nav {
+    display: none;
+    color: black;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+table{
+    color: white;
+    margin-right: auto;
+    margin-left: auto;
+    margin: 0em 1em 1em 1em;
+    border-collapse: collapse;
+    
+}
+
+td, th{
+    border: 1px solid rgb(255, 255, 255);
+}
+
+caption{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+aside {
+    display: none;
+}
+.subscribe-button{
+    display: flex;
+    background-color: rgb(200, 0, 0);  
+    color: white;
+    font-weight: 900;
+    border: none;
+    margin-top: 1rem;
+    padding: 10px 15px;
+    border-radius: 4px;   
+    cursor: pointer;     
+    justify-content: center;
+    transition: opacity 0.2s, box-shadow 0.3s;  
+}
+.Youtube a { 
+    display: flex;
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+.subscribe-button:hover {
+    opacity: 0.7; 
+    box-shadow:0px 0px 20px rgba(255, 255, 255, 0.814);  
+}
+
+.subscribe-button:active{
+    opacity: 0.4;
+}
+
+@viewport {
+    width: device-width;
+}
+
+@keyframes tier-gradient {
+    0% {background-position: left;}
+    100% {background-position: right;}
+}
+
+
+@media screen and (min-width: 10px) {
+    :root {
+        font-size: 15px;
+    }
+
+    html {
+        margin: 0;
+    }
+
+    body {
+        margin: 0;
+        background-color: var(--background-color);
+        font-size: 20px;
+    }
+
+    .banner {
+        width: 100%;
+    }
+/*Header NavBar*/
+    #navbar ul {
+        margin: 0;
+        padding: 0;
+        background-color: var(--nav-color);
+    }
+
+    #navbar li {
+
+        border-bottom: 2.5px solid black;
+        transition: background-color 0.7s;
+        background-color: var(--nav-color)
+    }
+
+    #navbar li:hover {
+        background-color: rgb(0, 0, 0);
+
+        color: var(--color);
+    }
+
+    #navbar li a {
+        display: flex;
+        font-size: 1.2em;
+        color: var(--color);
+        text-decoration: none;
+        font-weight: bold;
+        text-align: center;
+        justify-content: center;
+        padding: 0.45rem;
+        transition: color 1s;
+    }
+
+    #navbar li a:hover {
+        color: var(--nav-hover-color)
+    }
+/*Hunter DropDown NavBar*/
+    ul.hunter_mini_navbar {
+        padding-left: 0;
+    }
+
+    #hunter_navbar {
+        background-image: linear-gradient(rgb(255, 0, 0), rgb(136, 39, 0));
+    }
+
+    #hunter_navbar ul {
+        list-style: none;
+    }
+
+    .hunter_mini_navbar>li>a {
+        display: flex;
+        justify-content: center;
+        font-size: 4.5rem;
+        font-weight: bold;
+        color: var(--color);
+        text-decoration: none;
+    }
+
+    @media (hover:none) {
+        
+        #hunter_navbar ul li:active ul.pop_out_nav {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+
+    @media (hover:hover) {
+        #hunter_navbar ul li:hover ul.pop_out_nav {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+
+    #hunter_navbar ul li:hover ul.pop_out_nav li {
+        display: flex;
+        width: 20%;
+        max-width: 210px;
+    }
+
+    #hunter_navbar ul li:hover ul.pop_out_nav img {
+        display: flex;
+        width: 90%;
+
+    }
+
+    #hunter_side_navbar, #survivor_side_navbar{
+        display: none;
+    }
+    
+/*Survivor DropDown NavBar*/
+    ul.survivor_mini_navbar {
+        padding-left: 0;
+    }
+
+    #survivor_navbar {
+        background-image: linear-gradient(rgb(0, 238, 255), blue);
+    }
+
+    #survivor_navbar ul {
+        list-style: none;
+    }
+
+    .survivor_dropdown {
+        color: var(--color);
+    }
+
+    .survivor_mini_navbar>li>a {
+        display: flex;
+        justify-content: center;
+        font-size: 4.5rem;
+        font-weight: bold;
+        color: var(--color);
+        text-decoration: none;
+    }
+/*note*/
+    @media (hover:none) {
+        
+        #survivor_navbar ul li:active ul.pop_out_nav {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+
+    @media (hover:hover) {
+        #survivor_navbar ul li:hover ul.pop_out_nav {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+
+    #survivor_navbar ul li:hover ul.pop_out_nav li {
+        display: flex;
+        width: 20%;
+        max-width: 210px;
+    }
+
+    #survivor_navbar ul li:hover ul.pop_out_nav img {
+        display: flex;
+        width: 90%;
+
+    }
+
+    h1 {
+        color: var(--color);
+        font-size: 3rem;
+        margin: 1rem;
+        text-align: center;
+    }
+
+    h2 {
+
+        color: var(--color);
+        font-size: 2.5rem;
+        margin: 1rem;
+
+    }
+
+    h3 {
+
+        color: var(--color);
+        font-size: 1.5rem;
+        margin: 1rem;
+
+    }
+
+    h4 {
+
+
+        color: var(--color);
+        font-size: 1.5rem;
+        margin: 1rem;
+
+    }
+
+    h5 {
+
+        color: var(--color);
+        font-size: 1.25rem;
+        margin-left: 1rem;
+
+    }
+
+    p {
+        margin-right: 1rem;
+        margin-left: 1rem;
+        color: var(--color);
+    }
+
+    .emoji {
+        position: relative;
+    }
+
+    .emoji img {
+        position: absolute;
+        width: 100%;
+        max-width: 110px;
+        translate: -6.5rem -3rem;
+        /*
+        top: -20px;
+        bottom: 0px;
+        right: 0px;
+        left: 400px;*/
+    }
+
+
+    figure {
+        margin: 0;
+    }
+
+    .survivor-deduction, .hunter-deduction {
+        color: var(--background-color);
+        margin-bottom: 1em;
+        border: 1px solid white;
+        border-radius: 16px;
+        margin: 1rem;
+        
+    }
+    
+
+    @media (hover:none) {
+        section#luckyguy {
+            background-image: var(--c-tier-hover);
+        }
+    }
+
+    @media (hover:hover) {
+        section#luckyguy:hover {
+            background-size: 400%;
+            background-image:var(--c-tier-hover);
+            animation: tier-gradient 7s infinite alternate;
+        }
+    }
+
+    #luckyguy figure {
+        width: 100%;
+    }
+
+    #luckyguy img {
+        float: left;
+        shape-margin: 0px;
+        margin-top: 1em;
+    }
+
+    #luckyguy i {
+        text-decoration: underline;
+    }
+
+    /**/
+    #luckyparcel {
+        position: relative;
+    }
+
+    #luckyparcel i img {
+        position: absolute;
+        visibility: hidden;
+        width: 100%;
+        max-width: 120px;
+        min-width: 50px;
+        transform: translate(0px, -112px);
+    }
+
+    @media (hover:none) {
+        #luckyparcel i:active img {
+            visibility: visible;   
+        }
+    }
+
+    @media (hover:hover) {
+        #luckyparcel i:hover img {
+            visibility: visible;
+        }
+    }
+/*Gardener - Emma Woods*/
+    @media (hover:none) {
+        section#gardener {
+            background-image: var(--c-tier-hover);
+        }
+    }
+
+    @media (hover:hover) {
+        section#gardener:hover {
+            background-size: 400%;
+            background-image:var(--c-tier-hover);
+            animation: tier-gradient 7s infinite alternate;
+            transition: color 5s;
+        }
+    }
+
+    #gardener img {
+        float: left;
+        shape-margin: 0em;
+        margin-top: 1em;
+    }
+/*
+    #gardener {
+        border: 1px solid white;
+        border-radius: 16px;
+        margin: 1rem;
+    }
+*/
+    #gardener i {
+        text-decoration: underline;
+    }
+
+    #toolkit {
+        position: relative;
+    }
+
+    #toolkit i img {
+        position: absolute;
+        visibility: hidden;
+        width: 100%;
+        max-width: 150px;
+        transform: translate(0em, -7em);
+    }
+
+
+    @media (hover:none) {
+        #toolkit i:active img {
+            visibility: visible;
+        }
+    }
+
+    @media (hover:hover) {
+        #toolkit i:hover img {
+            visibility: visible;
+        }
+    }
+
+    @media (hover:none) {
+        section#lawyer {
+            background-image: var(--b-tier-hover);
+        }
+    }
+
+    @media (hover:hover) {
+        section#lawyer:hover {
+            background-size: 400%;
+            background-image:var(--b-tier-hover);
+            animation: tier-gradient 7s infinite alternate;
+            transition: color 5s;
+        }
+    }
+
+    #lawyer img {
+        float: left;
+        shape-margin: 0em;
+        margin-top: 1em;
+    }
+/*
+    #lawyer {
+        border: 1px solid white;
+        border-radius: 16px;
+        margin: 1rem;
+    }
+*/
+    #lawyer i {
+        text-decoration: underline;
+    }
+
+    #map {
+        position: relative;
+    }
+
+    #map i img {
+        position: absolute;
+        visibility: hidden;
+        width: 100%;
+        max-width: 150px;
+        transform: translate(1em, -7em);
+    }
+
+
+    @media (hover:none) {
+        #map i:active img {
+            visibility: visible;
+        }
+    }
+
+    @media (hover:hover) {
+        #map i:hover img {
+            visibility: visible;
+        }
+    }
+
+    @media (hover:none) {
+        section#doctor {
+            background-image: var(--c-tier-hover);
+        }
+    }
+
+    @media (hover:hover) {
+        section#doctor:hover {
+            background-size: 400%;
+            background-image:var(--c-tier-hover);
+            animation: tier-gradient 7s infinite alternate;
+            transition: color 5s;
+        }
+    }
+
+    #doctor img {
+        float: left;
+        shape-margin: 0em;
+        margin-top: 1em;
+    }
+/*
+    #doctor {
+        border: 1px solid white;
+        border-radius: 16px;
+        margin: 1rem;
+    }
+*/
+    #doctor i {
+        text-decoration: underline;
+    }
+
+    #syringe {
+        position: relative;
+    }
+
+    #syringe i img {
+        position: absolute;
+        visibility: hidden;
+        width: 100%;
+        max-width: 20%;
+        min-width: 10%;
+        transform: translate(1em, -4em);
+    }
+
+
+    @media (hover:none) {
+        #syringe i:active img {
+            visibility: visible;
+        }
+    }
+
+    @media (hover:hover) {
+        #syringe i:hover img {
+            visibility: visible;
+        }
+    }
+/*Hunter Image*/
+    #hellember img, #smileyface img, #gamekeeper img, #ripper img {
+        float: left;
+        shape-margin: 0em;
+        margin-top: 1em;
+    }
+/*Hunter Skill description in i*/
+    #hellember i, #smileyface i, #gamekeeper i, #ripper i {
+        text-decoration: underline;
+    }
+/*Hunter Skill description parent's position*/
+    .infernalsoul, #rocketmodification, #suffocation {
+        position: relative;
+    }
+
+    /*Hell Ember*/
+    .infernalsoul i img {
+        position: absolute;
+        visibility: hidden;
+        width: 100%;
+        max-width: 120px;
+        min-width: 50px;
+        translate: -7em -7em
+    }
+
+    @media (hover:none) {
+        .infernalsoul i:active img {
+            visibility: visible;
+        }
+    }
+
+    @media (hover:hover) {
+        .infernalsoul i:hover img {
+            visibility: visible;
+        }
+    }
+
+    #puppetcontrol {
+        position: relative;
+    }
+
+    #puppetcontrol img {
+        position: absolute;
+        visibility: hidden;
+        width: 100%;
+        max-width: 120px;
+        min-width: 50px;
+        translate: 0.5em -5em
+    }
+
+    @media (hover:none) {
+        #puppetcontrol:active img {
+            visibility: visible;
+        }
+    }
+
+    @media (hover:hover) {
+        #puppetcontrol:hover img {
+            visibility: visible;
+        }
+    }
+
+    @media (hover:none) {
+        section#hellember {
+            background-image: var(--c-tier-hover);
+        }
+    }
+
+    @media (hover:hover) {
+        section#hellember:hover {
+            background-size: 400%;
+            background-image:var(--c-tier-hover);
+            animation: tier-gradient 7s infinite alternate;
+            transition: color 5s;
+        }
+    }
+
+/*---------------------------------------------*/
+
+/*Hunter Joker - Smiley Face*/
+    #rocketmodification i img {
+        position: absolute;
+        visibility: hidden;
+        width: 100%;
+        max-width: 120px;
+        min-width: 50px;
+        translate: -7em -7em;
+    }
+
+    @media (hover:none) {
+        #rocketmodification i:active img {
+            visibility: visible;
+        }
+    }
+
+    @media (hover:hover) {
+        #rocketmodification i:hover img {
+            visibility: visible;
+        }
+    }
+
+    @media (hover:none) {
+        section#smileyface {
+            background-image: var(--c-tier-hover);
+        }
+    }
+
+    @media (hover:hover) {
+        section#smileyface:hover {
+            background-size: 400%;
+            background-image:var(--c-tier-hover);
+            animation: tier-gradient 7s infinite alternate;
+            transition: color 5s;
+        }
+    }
+
+/*---------------------------------------------*/
+
+/*Gamekeeper*/
+    #suffocation i img {
+        position: absolute;
+        visibility: hidden;
+        width: 100%;
+        max-width: 120px;
+        min-width: 50px;
+        translate: -5em -7em
+    }
+
+    @media (hover:none) {
+        #suffocation i:active img {
+            visibility: visible;
+        }
+    }
+
+    @media (hover:hover) {
+        #suffocation i:hover img {
+            visibility: visible;
+        }
+    }
+
+    #chain-hook, #trap {
+        position: relative;
+    }
+
+    #chain-hook img, #trap img {
+        position: absolute;
+        visibility: hidden;
+        width: 100%;
+        max-width: 120px;
+        min-width: 50px;
+    }
+
+    #trap img {
+        position: absolute;
+        visibility: hidden;
+        width: 100%;
+        max-width: 120px;
+        min-width: 70px;
+    }
+
+    @media (hover:none) {
+        #chain-hook:active img, #trap:active img {
+            visibility: visible;
+            translate: 0.5em -3.5em;
+        }
+    }
+
+    @media (hover:hover) {
+        #chain-hook:hover img, #trap:hover img {
+            visibility: visible;
+            translate: 0.5em -3.5em;
+        }
+    }
+
+    @media (hover:none) {
+        section#gamekeeper {
+            background-image: var(--c-tier-hover);
+        }
+    }
+
+    @media (hover:hover) {
+        section#gamekeeper:hover {
+            background-size: 400%;
+            background-image:var(--c-tier-hover);
+            animation: tier-gradient 7s infinite alternate;
+            transition: color 5s;
+        }
+    }
+
+/*---------------------------------------------*/
+/*Ripper*/
+#fogblade i img {
+    position: absolute;
+    visibility: hidden;
+    width: 100%;
+    max-width: 120px;
+    min-width: 50px;
+    translate: -7em -7em;
+}
+
+@media (hover:none) {
+    #fogblade i:active img {
+        visibility: visible;
+    }
+}
+
+@media (hover:hover) {
+    #fogblade i:hover img {
+        visibility: visible;
+    }
+}
+
+#freezingfog, #hiddeninmist {
+    position: relative;
+}
+
+#freezingfog img {
+    position: absolute;
+    visibility: hidden;
+    width: 100%;
+    max-width: 120px;
+    min-width: 50px;
+}
+
+@media (hover:none) {
+    #freezingfog:active img {
+        visibility: visible;
+        translate: 1em -3.5em;
+    }
+}
+
+@media (hover:hover) {
+    #freezingfog:hover img {
+        visibility: visible;
+        translate: 1em -3.5em;
+    }
+}
+
+@media (hover:none) {
+    section#ripper {
+        background-image: var(--c-tier-hover);
+    }
+}
+
+@media (hover:hover) {
+    section#ripper:hover {
+        background-size: 400%;
+        background-image:var(--c-tier-hover);
+        animation: tier-gradient 7s infinite alternate;
+        transition: color 5s;
+    }
+}
+
+/*video home*/
+#video-box{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+.pagevideo{
+    display: inline-block;
+    width: 45%;
+    position: relative;
+    padding-top: 30%;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+.pagevideo iframe{
+    position: absolute;
+    top:0 ;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;  
+}
+
+#giveaway figure{
+    display: flex;  
+    flex-wrap: wrap;
+}
+
+#giveaway img{
+    width: 50%;
+}
+
+
+}
+
+@media screen and (min-width: 650px) {
+    body {
+        margin: 10px;
+        background-color: var(--background-color);
+
+    }
+
+    .banner {
+        width: 100%;
+    }
+
+    #navbar ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0;
+        background-color: var(--nav-color);
+
+    }
+
+    #navbar li {
+        display: flex;
+        border: none;
+    }
+
+    #navbar li a {
+        display: block;
+        font-size: 2rem;
+        color: var(--color);
+        text-decoration: none;
+        font-weight: 900;
+
+        padding: 0.55em;
+        text-shadow: -2px 2px 13px black;
+
+    }
+
+    #survivor_navbar {
+        background-image: linear-gradient(rgb(0, 238, 255), blue);
+
+    }
+
+    #survivor_navbar ul {
+        list-style: none;
+    }
+
+
+    h1 {
+
+        color: var(--color);
+        font-size: 3.5rem;
+        margin: 0.5em;
+        text-align: center;
+    }
+
+    h2 {
+        color: var(--color);
+        font-size: 2.5rem;
+        margin: 1rem;
+
+    }
+
+    h3 {
+
+        color: var(--color);
+        font-size: 2rem;
+        margin: 0.5em;
+
+    }
+
+    h4 {
+
+
+        color: var(--color);
+        font-size: 1.5rem;
+        margin-bottom: 0.5em;
+
+    }
+
+    h5 {
+
+        color: var(--color);
+        font-size: 1.25rem;
+        margin: 0.5em;
+
+    }
+
+    p {
+        margin-right: 0.75em;
+        margin-left: 0.75em;
+        color: var(--color);
+
+
+    }
+
+    #intro {
+        position: relative;
+    }
+
+    #intro img {
+        position: absolute;
+        width: 100%;
+        max-width: 155px;
+        translate: 0rem -5rem;
+        /*
+        top: -20px;
+        bottom: 0px;
+        right: 0px;
+        left: 400px;*/
+    }
+
+
+
+    #survivors, #hunters {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    
+    #survivors h1, #hunters h1{
+        justify-content: center;
+        flex-basis: 100%;
+    }
+
+    #hellember,#smileyface,#gamekeeper,#ripper{
+        width: 100%;
+    }
+
+    #luckyguy,#gardener,#lawyer,#doctor{
+        width: 100%;
+    }
+
+    #survivors > #luckyguy,#gardener,#lawyer,#doctor {
+        flex-basis: 47%;
+        flex-grow: 3;
+        flex-shrink: 3;
+    }
+
+    #hunters > #hellember, #smileyface, #gamekeeper, #ripper {
+        flex-basis: 47%;
+        flex-grow: 3;
+        flex-shrink: 3;
+    }
+
+
+
+    figure {
+        margin: 0;
+    }
+
+    .survivor-deduction, .hunter-deduction {
+        margin-bottom: 1em;
+    }
+
+
+    #luckyguy img {
+        float: left;
+        shape-margin: 1em;
+        margin: 1em 0.1em;
+        width: 20%;
+        min-width: 110px;
+    }
+
+    #luckyguy {
+        border: 1px solid white;
+        border-radius: 16px;
+        margin: 1rem;
+    }
+
+    #luckyguy i {
+        text-decoration: underline;
+    }
+
+   
+    #luckyparcel {
+        position: relative;
+    }
+
+    #luckyparcel i img {
+        position: absolute;
+        visibility: hidden;
+        width: 90%;
+        max-width: 20%;
+    }
+
+    #luckyparcel i:hover img {
+        visibility: visible;
+        translate: 0em -10em;
+    }
+/*
+    section#gardener {
+        margin-bottom: 1em;
+    }
+*/
+
+    #gardener img {
+        float: left;
+        shape-margin: 0em;
+        margin-top: 1em;
+        width: 17%;
+        min-width: 100px;
+    }
+
+
+    #gardener {
+        border: 1px solid white;
+        border-radius: 16px;
+        margin: 1rem;
+    }
+
+    img.lawyer-portrait {
+        float: left;
+        shape-margin: 0em;
+        margin-top: 1em;
+        width: 100%;
+        max-width: 20%;
+        min-width: 10%;
+    }
+
+    img.doctor-portrait {
+        float: left;
+        shape-margin: 0em;
+        margin-top: 1em;
+        width: 60%;
+        max-width: 20%;
+        min-width: 10%;
+    }
+
+    @media (hover:none) {
+        #syringe i:active img {
+            visibility: visible;
+            translate: 0em -5em;
+            
+        }
+    }
+
+    @media (hover:hover) {
+        #syringe i:hover img {
+            visibility: visible;
+            translate: 0em -5em;
+        }
+    }
+/*Leo - The Hell Ember*/
+    .hellember-portrait img {
+        float: left;
+        shape-margin: 1em;
+        margin: 1em 0.1em 0em 0.1em;
+        width: 35%;
+        min-width: 220px;
+        max-width: 290px;
+    }
+
+    #hellember {
+        border: 1px solid white;
+        border-radius: 16px;
+        margin: 1rem;
+    }
+
+    #puppetcontrol {
+        position: relative;
+    }
+
+    #puppetcontrol img {
+        position: absolute;
+        visibility: hidden;
+        width: 100%;
+        max-width: 120px;
+        min-width: 50px;
+    }
+
+
+    @media (hover:none) {
+        #puppetcontrol:active img {
+            visibility: visible;
+            translate: 0em -5em;
+        }
+    }
+
+    @media (hover:hover) {
+        #puppetcontrol:hover img {
+            visibility: visible;
+            translate: 0em -5em;
+        }
+    }
+
+    .infernalsoul i img {
+        position: absolute;
+        visibility: hidden;
+        width: 100%;
+        max-width: 120px;
+        min-width: 50px;
+        translate: -7em -7em
+    }
+
+    @media (hover:none) {
+        .infernalsoul i:active img {
+            visibility: visible;
+        }
+    }
+
+    @media (hover:hover) {
+        .infernalsoul i:hover img {
+            visibility: visible;
+        }
+    }
+
+    #puppetcontrol {
+        position: relative;
+    }
+
+    #puppetcontrol img {
+        position: absolute;
+        visibility: hidden;
+        width: 100%;
+        max-width: 120px;
+        min-width: 50px;
+        translate: 0.5em -5em
+    }
+
+    @media (hover:none) {
+        #puppetcontrol:active img {
+            visibility: visible;
+        }
+    }
+
+    @media (hover:hover) {
+        #puppetcontrol:hover img {
+            visibility: visible;
+        }
+    }
+
+    #smileyface img {
+        float: left;
+        shape-margin: 1em;
+        margin: 1em 0.1em 0em 0.1em;
+        width: 40%;
+        min-width: 250px;
+        
+    }
+
+    @media (hover:none) {
+        #rocketmodification i:active img {
+            visibility: visible;
+            translate: 2em -7em;
+            
+        }
+    }
+
+    @media (hover:hover) {
+        #rocketmodification i:hover img {
+            visibility: visible;
+            translate: 2em -7em;
+        }
+    }
+
+    #gamekeeper img {
+        float: left;
+        shape-margin: 1em;
+        margin: 1em 0.1em 0em 0.1em;
+        width: 40%;
+        min-width: 240px;   
+    }
+
+    #chain-hook, #trap {
+        position: relative;
+    }
+
+    #chain-hook img {
+        position: absolute;
+        visibility: hidden;
+        width: 100%;
+        max-width: 160px;
+        min-width: 106px;
+    }
+
+    #trap img {
+        position: absolute;
+        visibility: hidden;
+        width: 100%;
+        max-width: 160px;
+        min-width: 120px;
+    }
+
+    #ripper img {
+        float: left;
+        shape-margin: 1em;
+        margin: 1em 0.1em 0em 0.1em;
+        width: 40%;
+        min-width: 220px;   
+        max-width: 300px;
+    }
+
+    #freezingfog, #hiddeninmist {
+        position: relative;
+    }
+
+    #freezingfog img, #hiddeninmist img {
+        position: absolute;
+        visibility: hidden;
+        width: 100%;
+        max-width: 140px;
+        min-width: 120px;
+    }
+
+     
+}
+
+
+@media screen and (min-width: 1020px) {
+    body {
+        margin: 20px;
+        background-color: var(--background-color);
+        display: grid;
+        grid-template-columns: 1.5fr 4fr 1.5fr;
+        grid-template-areas: 'top top top'
+        'nav nav nav'
+        'middleleft middlemiddle middleright'
+        'bottomleft bottommiddle bottomright'
+    }
+
+
+    .banner {
+        width: 100%;
+    }
+
+    header{
+        grid-area:top;
+    }
+
+    nav#survivor_navbar, nav#hunter_navbar{
+        grid-area: nav;
+        margin-top: 0.5em;
+    }
+
+    nav#hunter_side_navbar, nav#survivor_side_navbar {
+        grid-area: middleleft;
+        position: relative;
+    }
+  
+    nav#hunter_side_navbar, nav#survivor_side_navbar{
+        display: flex;
+        padding: 0rem;
+        flex-wrap: wrap;
+    }
+
+    nav#hunter_side_navbar li, nav#survivor_side_navbar li{
+        display: inline-block;
+    }
+
+    ul.hunter_mini_side_navbar, ul.survivor_mini_side_navbar{
+        padding: 0rem;
+    }
+
+    ul.hunter_mini_side_navbar li, ul.survivor_mini_side_navbar li {
+        position: sticky;
+        top:0;
+        left:0;
+    }
+
+    ul.hunter_mini_side_navbar li ul, ul.survivor_mini_side_navbar li ul {
+        padding:0;
+    }
+
+    nav#hunter_side_navbar img, nav#survivor_side_navbar img {
+        width: 100%;
+        max-width: 100px;
+    }
+
+    main#home, main#hunter-page, main#survivor-page {
+        grid-area: middlemiddle;
+    }
+
+    aside{
+        display: block;
+    }
+    aside#video-nav{
+        grid-area: middleright;
+        max-width: 450px;
+    }
+
+    aside#video-nav section, aside#playlist-nav section {
+        position: sticky;
+        top:0;
+        left:0;
+    }
+
+    figure.asidevideo{
+        position: relative;
+        padding-bottom: 56.25%;
+        /*Equals 16:9 */
+        /*Taken from https://www.youtube.com/watch?v=0L8cQ9nRtuE
+        at 11:23*/
+        height:0;
+        margin-top: 10px;
+    }
+
+    aside#video-nav .asidevideo iframe, aside#playlist-nav .asidevideo iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height:100%;
+    }
+
+
+    aside#playlist-nav{
+        grid-area: middleleft;
+    }
+
+    footer#project{
+        grid-area: bottomright;
+    }
+
+    footer#projectidv{
+        grid-area: bottomleft;
+    }
+
+    .subscribe-button {
+        grid-area: bottommiddle;
+    }
+
+    
+}

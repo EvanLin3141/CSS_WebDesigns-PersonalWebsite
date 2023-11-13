@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='utf-8'/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    <title>Identity V</title>
+    <link rel='stylesheet' href='styles.css' />
+    <link rel='icon' href='favicon.ico' />
+</head>
+
+<body>
+
+    <header>
+        <img class='yt banner' src='images/YTbanner.jpg' title='My Channel Banner'
+            alt="Channel Banner of Kuroshiro Gaming" />
+        <nav id="navbar">
+            <ul class="survivor_dropdown">
+                <li><a href='index.html'>Home</a></li>
+                <li><a href='hunters.html'>Hunters</a></li>
+                <li><a href='survivors.html'>Survivors</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <nav id="hunter_navbar">
+        <ul class="hunter_mini_navbar">
+            <li><a href='#hunter_top'>Hunters</a>
+                <ul class="pop_out_nav">
+                    <li><a href="#hellember"><img src='hunterportrait/hellember.png' alt="Hell Embers's Portrait" /></a></li>
+                    <li><a href="#smileyface"><img src='hunterportrait/smileyface.png' alt="Smiley Face's Portrait" /></a></li>
+                    <li><a href="#gamekeeper"><img src='hunterportrait/gamekeeper.png' alt="Gamekeeper's Portrait" /></a></li>
+                    <li><a href="#ripper"><img src='hunterportrait/ripper.png' alt="ripper's Portrait" /></a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <nav id="hunter_side_navbar">
+        <ul class="hunter_mini_side_navbar">
+            <li>
+                <ul>
+                    <li><a href="#hellember"><img src='hunterportrait/hellember.png' alt="Hell Embers's Portrait" /></a></li>
+                    <li><a href="#smileyface"><img src='hunterportrait/smileyface.png' alt="Smiley Face's Portrait" /></a></li>
+                    <li><a href="#gamekeeper"><img src='hunterportrait/gamekeeper.png' alt="Gamekeeper's Portrait" /></a></li>
+                    <li><a href="#ripper"><img src='hunterportrait/ripper.png' alt="ripper's Portrait" /></a></li>
+                </ul>
+            </li>        
+        </ul>
+    </nav>
+
+    <main id="hunter-page">
+        <section id='hunters'>
+            <h1>Hunter Deductions</h1>
+           
+            <section id='hellember' class="hunter-deduction">
+                <figure>
+                    <picture>
+                        <source srcset='hunterpng/hellember.png' media='(min-width: 650px)'>
+                        <img class="hellember-portrait" src='hunterportrait/hellember.png' title="Hell Ember" alt="Appearance of Leo" />
+                    </picture>
+                </figure>
+                <h2>Hell Ember</h2>
+                <h4>Character Introduction</h4>
+                <p>"I WILL FIND YOU" — Leo Beck
+                </p>
+
+                <h4>Special Attribute</h4>
+                <h5>Infernal Soul</h5>
+                <p>Lucky Guy relies heavily on luck. Yet Lady Luck may not always be by his side. </p>
+                <p class="infernalsoul">Leo accumulates fury for <i>Infernal Soul<img src='hunterskill/infernalsoul.png' alt="Leo's Infernal Soul"/></i> for each free moving
+                survivor decoding a cipher, after receiving abnormal status or when in pursuit </p>
+
+                <h5>Description</h5>
+                <p class="infernalsoul">Tap the skill button to awaken Phantoms for 25 seconds. Hold the skill button to transmit <i>Infernal Soul <img src='hunterskill/infernalsoul.png' alt="Leo's Infernal Soul"/></i> to <i>Puppets<img src='hunterskill/puppet.png' alt="Leo's Puppets"/></i>.
+                </p>
+                <p>Puppets will be immobilized when survivors are dismantling puppets or when puppets hit survivors</p>
+                <table>
+                    <caption>Puppet Control</caption>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Ability</th>
+                    </tr>
+                    <tr>
+                        <th scope="row" id="puppetcontrol">Puppet Control <img src = 'hunterskill/puppet.png' alt="Leo's Puppets"/></th>
+                        <td>Leo is connected to his puppets. Due to this, he is able to switch locations with puppets and temporarily gain a movement speed boost,
+                            for a short period of time. The puppets can also detect nearby survivors and alert Leo.
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Multi-Puppet Control</th>
+                        <td>Leo gaines 1 extra puppet. He is able to synchronize attack animation with this puppet also. </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Phantoms</th>
+                        <td>Phantoms will automatically pursue nearby survivors. Phantoms can also be casted onto puppet to pursue and to locate survivors.</td>
+                    </tr>
+                </table>
+            </section>
+
+            <section id ='smileyface' class="hunter-deduction">
+                <figure>
+                    <picture>
+                        <source srcset='hunterpng/smileyface.png' media = '(min-width: 650px)'>
+                        <img class = 'smileyface-portrait' src='hunterportrait/smileyface.png' title="Gardener" alt ="Appearance of Joker">
+                    </picture>
+                </figure>
+                <h2>Smiley Face</h2>
+                <h4>Character Introduction</h4>
+                <p>"Thank you, this face is suitable." — Joker
+                </p>
+
+                <h4>Special Attribute</h4>
+                <h5>Rocket Modification</h5>
+                <p>Joker can collect rocket parts around the map to modify his rocket </p>
+                <p id="rocketmodification">Joker's rocket parts are scattered all across the map for <i>Rocket Modification<img src='hunterskill/rocketmodification.png' alt="Joker's Rocket Modification"/></i> 
+                </p>
+
+                <h5>Description</h5>
+                <p>Joker has can modify his rocket in numerous ways. Can instantly equip multiple parts when selecting Rocket Modification or can equip 1 at a time.
+                    Modification is lost after an attack or Rocket Dash.
+                </p>
+                <table>
+                    <caption>Rocket Parts</caption>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Ability</th>
+                    </tr>
+                    <tr>
+                        <th scope="row">Wind Wings</th>
+                        <td>Increases Attack Speed by 25% and Rocket Dash Speed by 50%.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Drill</th>
+                        <td>Healing time will be increased by 100% when taking normal attacks or abilities </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Propellor</th>
+                        <td>Grants unlimited Rocket Dash Time speed of rocket dash will be slightly decreased. If rocket dash is interrupted by survivors.
+                            Cooldown will be reduced to 6 seconds.
+                        </td>
+                    </tr>
+                </table>
+            </section>
+
+            <section id ='gamekeeper' class="hunter-deduction">
+                <figure>
+                    <picture>
+                        <source srcset='hunterpng/gamekeeper.png' media = '(min-width: 650px)'>
+                        <img class = 'gamekeeper-portrait' src='hunterportrait/gamekeeper.png' title="Gamekeeper" alt ="Appearance of Bane">
+                    </picture>
+                </figure>
+                <h2>Gamekeeper</h2>
+                <h4>Character Introduction</h4>
+                <p>"You'll get hurt from being too nice." — Bane 
+                </p>
+
+                <h4>Special Attribute</h4>
+                <h5>Suffocation</h5>
+                <p>Gamekeeper has the ability to suffocate survivors by his rapid fast collisions against obstacle, which causes shock waves. When hooking towards an 
+                    object, Bane will be dragged towards it at high speed. When hooking towards survivors, Bane will drag the survivor towards him. </p>
+                <p id="suffocation">With each successful collision, Bane activates <i>Suffocation<img src='hunterskill/suffocation.png' alt="Bane's suffocation" /></i> 
+                </p>
+
+                <h5>Description</h5>
+                <p>Each shock wave slows nearby survivors interaction and movement speed by 13% and then 20% respectively for 5 seconds. This effect can be stacked up to 3 times.
+                When hit by Chain Hook, survivors location will be revealed to Gamekeeper 2 times within 60 seconds.
+                </p>
+                <table>
+                    <caption>Suffocation</caption>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Ability</th>
+                    </tr>
+                    <tr>
+                        <th scope="row" id="chain-hook">Chain Hook <img src = 'hunterskill/chainhook.png' alt="Leo's Puppets"/></th>
+                        <td>When Bane swings his hooks. If it hits a survivor it will hook the survivor towards him. If it hits an obstacle he will pull himself
+                            towards the obstacle instead. He can cast this skill again within 8 seconds if he his hook lands. If he misses then this skill immediately goes into cooldown.
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row" id="trap">Trap <img src = 'hunterskill/trap.png' alt="Bane's Trap"/></th>
+                        <td>Bane can place traps all around the map. (Max capped: 8, Cannot place trap near a basement or within 20 meters of a Rocket Chair)
+                            Survivors who steps on the trap will be immobilized for 8 seconds and will be visible to Bane for 5 seconds. </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Thorny Chain Hook</th>
+                        <td>When Bane's hook is in impact with a survivor. It deals 50% of a normal attack.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Fury Hook</th>
+                        <td>Bane's hook is now unlimited. First 2 cast has to be used within 8 seconds. Then subsequently 3 seconds each.</td>
+                    </tr>
+                </table>
+            </section>
+        
+            <section id ='ripper' class="hunter-deduction">
+                <figure>
+                    <picture>
+                        <source srcset='hunterpng/ripper.png' media = '(min-width: 650px)'>
+                        <img class = 'ripper-portrait' src='hunterportrait/ripper.png' title="Ripper" alt ="Appearance of Jack">
+                    </picture>
+                </figure>
+                <h2>Ripper</h2>
+                <h4>Character Introduction</h4>
+                <p>"I have begun to fear falling asleep. That is most likely only a joke, but...I wake up to the smell of rust every morning.
+                    How can I be free of "him"? — Jack
+                </p>
+
+                <h4>Special Attribute</h4>
+                <h5>Freezing Fog</h5>
+                <p>The fog's chill can be felt on one's bones. Fog blades are created on Ripper's hands when a certain amount of fog has been accumulated. </p>
+                <p id="fogblade">Accumulates freezing mists to create <i>Fog Blade.<img src='hunterskill/freezingfog.png' alt="Ripper's mist"/></i>
+                </p>
+
+                <h5>Description</h5>
+                <p>Once every 20 seconds. Ripper gaines a fog blade. Fog blade deals damage equivalent to a normal attack.
+                </p>
+                
+                <table>
+                    <caption>Freezing Mist</caption>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Ability</th>
+                    </tr>
+                    <tr>
+                        <th scope="row" id="freezingfog">Freezing Fog <img src = 'hunterskill/freezingfog.png' alt="Ripper's freezing fog"/></th>
+                        <td>Freezing fog deals damage equivalent to a normal attack. If fog blade misses a survivor. It will create fog path for ripper 
+                            to walk on. Fog path reduces Hidden in mist's cooldown by 75% and increases Ripper's movement speed, slightly.
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row" id='hiddeninmist'>Hidden in Mist</th>
+                        <td>When no interaction or attack has been made. Ripper gradually enters hidden in mist. Increasing his movement speed and becomes 
+                            one with the fog. </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Hidden in Shadows</th>
+                        <td>Ripper will enter Hidden in Mist more quickly.</td>
+                    </tr>
+                </table>
+
+                
+            </section>
+        </section>
+    </main>
+
+    <aside id=video-nav>
+        <section>
+            <h2>Hunter Tierlists</h2>
+        <figure class="asidevideo">
+            <iframe width="480" src="https://youtube.com/embed/v4M2GXVE5VI" allow="autoplay; encrypted-media"
+             allowfullscreen></iframe>
+        </figure>
+        <figure class="asidevideo">
+            <iframe width="480" src="https://youtube.com/embed/-imP1kpbVZs" allow="autoplay; encrypted-media"
+             allowfullscreen></iframe>
+        </figure>
+        <figure class="asidevideo">
+            <iframe width="480" src="https://youtube.com/embed/t5tYE4oCfUU" allow="autoplay; encrypted-media"
+             allowfullscreen></iframe>
+        </figure>
+        </section>
+    </aside>
+
+    <footer id="project">
+        <p>
+            <small>&copy; Website made by Kuroshiro Killer for Dr.Derek Bridge</small>
+        </p>
+    </footer>
+
+    <footer id="projectidv">
+        <p>
+            <small>&copy; Website Dedicated for future enhancements
+                Hopefully you enjoyed this website xS
+            </small>
+        </p>
+    </footer>
+
+    <aside class="subscribe-button">
+        <p class="Youtube"><a href='https://www.youtube.com/@KuroshiroGaming'>SUBSCRIBE</a></p>
+    </aside>
+</body>
+
+</html>

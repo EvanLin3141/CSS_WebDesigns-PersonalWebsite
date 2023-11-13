@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='utf-8'/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    <title>Identity V</title>
+    <link rel='stylesheet' href='styles.css' />
+    <link rel='favicon' href='favicon.ico' />
+</head>
+
+<body>
+
+    <header>
+        <img class='yt banner' src='images/YTbanner.jpg' title='My Channel Banner'
+            alt="Channel Banner of Kuroshiro Gaming" />
+        <nav id="navbar">
+            <ul class="survivor_dropdown">
+                <li><a href='index.html'>Home</a></li>
+                <li><a href='hunters.html'>Hunters</a></li>
+                <li><a href='survivors.html'>Survivors</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <nav id="survivor_navbar">
+        <ul class="survivor_mini_navbar">
+            <li><a href='#survivor_top'>Survivors</a>
+                <ul class="pop_out_nav">
+                    <li><a href="#luckyguy"><img src='survivorportrait/LuckyGuy.png' alt="Lucky Guy's Portrait" /></a></li>
+                    <li><a href="#gardener"><img src='survivorportrait/Gardener.png' alt="Gardener's Portrait" /></a></li>
+                    <li><a href="#lawyer"><img src='survivorportrait/Lawyer.png' alt="Lawyers's Portrait" /></a></li>
+                    <li><a href="#doctor"><img src='survivorportrait/Doctor.png' alt="Doctors's Portrait" /></a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    
+    <nav id="survivor_side_navbar">
+    <ul class="survivor_mini_side_navbar">
+        <li>
+            <ul>
+                <li><a href="#luckyguy"><img src='survivorportrait/LuckyGuy.png' alt="Lucky Guy's Portrait" /></a></li>
+                <li><a href="#gardener"><img src='survivorportrait/Gardener.png' alt="Gardener's Portrait" /></a></li>
+                <li><a href="#lawyer"><img src='survivorportrait/Lawyer.png' alt="Lawyers's Portrait" /></a></li>
+                <li><a href="#doctor"><img src='survivorportrait/Doctor.png' alt="Doctors's Portrait" /></a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+<!-- Flex basis on children-->
+
+    <main id="survivor-page">
+        <section id='survivors'>
+            <h1>Survivor Deductions</h1>
+            <section id='luckyguy' class="survivor-deduction">
+                <figure>
+                    <picture>
+                        <source srcset='survivorpng/LuckyGuy.png' media='(min-width: 650px)'>
+                        <img class="luckyguy-portrait" src='survivorportrait/LuckyGuy.png' title="Lucky Guy" alt="Appearance of Lucky Guy" />
+                    </picture>
+                </figure>
+                <h2>Lucky Guy</h2>
+                <h4>Character Introduction</h4>
+                <p>Too many people has taken part in this game... yet only his name hasn't been recorded
+                    in Mrs.Nightingale's Diary
+                </p>
+
+                <h4>Special Attribute</h4>
+                <h5>Lucky Guy</h5>
+                <p>Lucky Guy relies heavily on luck. Yet Lady Luck may not always be by his side. </p>
+                <p id="luckyparcel">Obtains 1 <i>Lucky Parcel<img src='survivor_items/parcel.png' alt="Lucky Guy's Lucky Parcel"/></i> at the beginning of the
+                    match</p>
+
+                <h5>Description</h5>
+                <p>Carries a Lucky Parcel, which can be opened to obtain 1 random item. The Lucky
+                    Guy can wish for a specific item before opening the parcel. Greatly increases the chances of
+                    obtaining
+                    it
+                </p>
+                <p>Items obtained could be ranged from Coordinator's Gun to Doctors Syringe</p>
+            </section>
+
+            <section id ='gardener' class="survivor-deduction">
+                <figure>
+                    <picture>
+                        <source srcset='survivorpng/Gardener.png' media = '(min-width: 650px)'>
+                        <img class = 'gardener-portrait' src='survivorportrait/Gardener.png' title="Gardener" alt ="Appearance of Emma Woods">
+                    </picture>
+                </figure>
+                <h2>Gardener</h2>
+                <h4>Character Introduction</h4>
+                <p>Her amazing gardening skills serve only her dearest scarecrow. What's wrong with decorating your dream lover when you have the money?
+                </p>
+
+                <h4>Special Attribute</h4>
+                <h5>Ingenuity</h5>
+                <p>Gardener's love for breaking and mending is beyond comprehensive </p>
+                <p id="toolkit">Carries a <i>Tool Kit<img src='survivor_items/toolkit.png' alt="Gardener's tool kit" /></i> at all times. This item does not deplete
+                due to Gardener's basic repair skills</p>
+
+                <h5>Description</h5>
+                <p>Carries a Tool Kit that is used to destroy Rocket Chairs. Hunters are able to repair destroyed Rocket Chairs.
+                    The toolkit has a 12 second cool-down after each use.
+                </p>
+            </section>
+
+            <section id ='lawyer' class="survivor-deduction">
+                <figure>
+                    <picture>
+                        <source srcset='survivorpng/Lawyer.png' media = '(min-width: 650px)'>
+                        <img class = 'lawyer-portrait' src='survivorportrait/Lawyer.png' title="Lawyer" alt ="Appearance of Freddy Riley">
+                    </picture>
+                </figure>
+                <h2>Lawyer</h2>
+                <h4>Character Introduction</h4>
+                <p>Even after losing that disgraceful lawsuit, He still firmly believes the purpose of law is not to permit an act,
+                    but to prevent one. What else is forbidden? 
+                </p>
+
+                <h4>Special Attribute</h4>
+                <h5>Foresight</h5>
+                <p>As someone with the profession of a Lawyer, The Lawyer always takes good notes.  He silently keeps tracks of
+                    key points in his mind. </p>
+                <p id="map">Carries a <i>Map<img src='survivor_items/map.png' alt="Lawyer's map" /></i> at all times. It can be used to check the location of hunters,
+                survivors, exit gates and the 3 closest ciphers</p>
+
+                <h5>Description</h5>
+                <p>Each 5% decoding progress increases Lawyer's decoding speed by 1%, up to a maximum of 20%. Consumes 5% when opening the map and a 
+                    continuas 2.5% for each second of use.
+                </p>
+            </section>
+
+            <section id ='doctor' class="survivor-deduction">
+                <figure>
+                    <picture>
+                        <source srcset='survivorpng/Doctor.png' media = '(min-width: 650px)'>
+                        <img class = 'doctor-portrait' src='survivorportrait/Doctor.png' title="Doctor" alt ="Appearance of Emily Dyer">
+                    </picture>
+                </figure>
+                <h2>Doctor</h2>
+                <h4>Character Introduction</h4>
+                <p>After working in White Sand Asylum for such a long time. Emily realizes that not all doctors possesses a benevolent heart.
+                    The corruption in the medical firms were beyond her control. To survive, she's forced to do something 'out of the ordinary'.
+                </p>
+
+                <h4>Special Attribute</h4>
+                <h5>Med Master</h5>
+                <p>As a doctor who works hard to treat her patients. The doctor is able to heal survivors quickly </p>
+                <p id="syringe">Carries a <i>Syringe<img src='survivor_items/syringe.png' alt="Doctor's syringe"/></i> at all times and can heal herself when wounded.
+                This item does not deplete due to Doctor's special attribute </p>
+
+                <h5>Description</h5>
+                <p>The Doctor can heal herself and her team-mates quickly. Whenever she uses her syringe her fear radius is reduced by 25%. Upon taking damage less than 
+                    a normal attack. Her movement speed increases by 45%.
+                </p>
+            </section>
+        </section>
+    </main>
+
+    <aside id=video-nav>
+        <section>
+            <h2>Survivor Tierlist</h2>
+        <figure class="asidevideo">
+            <iframe width="480" src="https://youtube.com/embed/Nyk7BpqytbQ" allow="autoplay; encrypted-media"
+             allowfullscreen></iframe>
+        </figure>
+        <figure class="asidevideo">
+            <iframe width="480" src="https://youtube.com/embed/dxQg8jAjG0s" allow="autoplay; encrypted-media"
+             allowfullscreen></iframe>
+        </figure>
+        <figure class="asidevideo">
+            <iframe width="480" src="https://youtube.com/embed/AjqYGSwk15Y" allow="autoplay; encrypted-media"
+             allowfullscreen></iframe>
+        </figure>
+        </section>
+    </aside>
+
+    <aside class="subscribe-button">
+        <p class="Youtube"><a href='https://www.youtube.com/@KuroshiroGaming'>SUBSCRIBE</a></p>
+    </aside>
+
+    <footer id="project">
+        <p>
+            <small>&copy; Website made by Kuroshiro Killer for Dr.Derek Bridge</small>
+        </p>
+    </footer>
+
+    <footer id="projectidv">
+        <p>
+            <small>&copy; Website Dedicated for future enhancements
+                Hopefully you enjoyed this website xS
+            </small>
+        </p>
+    </footer>
+</body>
+
+</html>
